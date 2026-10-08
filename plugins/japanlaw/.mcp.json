@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "japanlaw": {
+      "type": "http",
+      "url": "https://japanlaw.org/mcp"
+    }
+  }
+}

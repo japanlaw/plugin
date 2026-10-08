@@ -1,0 +1,51 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "japanlaw",
+  "version": "0.10.0",
+  "description": "Read, cite and explain Japanese statutes from the text itself: the Japanese as published, the Ministry of Justice's English where there is one, and labelled machine translation where there is not. Six read-only tools from japanlaw.org's MCP server, and a skill that teaches how a Japanese provision is cited and which English may be quoted.",
+  "author": {
+    "name": "japanlaw.org",
+    "url": "https://japanlaw.org"
+  },
+  "homepage": "https://japanlaw.org/en/agents",
+  "repository": "https://github.com/japanlaw/plugin",
+  "license": "MIT",
+  "keywords": [
+    "japan",
+    "japanese-law",
+    "statutes",
+    "legal",
+    "translation",
+    "mcp"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "japanlaw.org",
+        "shortDescription": "Japanese law, from the text",
+        "longDescription": "Read, cite and explain Japanese statutes from the text itself: the Japanese as published, the Ministry of Justice's English where there is one, and labelled machine translation where there is not. Six read-only tools from japanlaw.org's MCP server, and a skill that teaches how a Japanese provision is cited and which English may be quoted.\n\nFor anyone who has to deal with a Japanese law: a worker, an employer, someone new to Japan, a lawyer abroad. Ask about an Act, a Cabinet Order or a Ministerial Order and the answer quotes the provision, links its page on japanlaw.org, and says whose English it is.\n\nNo account, no key and nothing to configure. What you ask is not recorded. It is information about the law, not legal advice, and it covers the laws japanlaw.org holds; local ordinances are not among them.",
+        "developerName": "japanlaw.org",
+        "category": "Productivity",
+        "capabilities": [
+          "Search Japanese law",
+          "Read a provision or a law",
+          "List the laws held",
+          "Describe one law",
+          "Read one provision",
+          "Find what cites a provision"
+        ],
+        "websiteURL": "https://japanlaw.org",
+        "privacyPolicyURL": "https://japanlaw.org/en/privacy",
+        "termsOfServiceURL": "https://japanlaw.org/en/terms",
+        "defaultPrompt": [
+          "Under Japanese law, how many hours of overtime can my employer ask of me in a month? Quote the article.",
+          "What does Article 36 of the Labor Standards Act say? Show the Japanese and say whose English it is.",
+          "I'm renting an apartment in Tokyo. When can the landlord refuse to renew the lease?"
+        ],
+        "brandColor": "#2C3B86",
+        "composerIcon": "./assets/icon.svg",
+        "logo": "./assets/icon.svg"
+      }
+    }
+  }
+}

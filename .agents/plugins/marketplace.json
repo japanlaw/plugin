@@ -1,0 +1,20 @@
+{
+  "name": "japanlaw",
+  "interface": {
+    "displayName": "japanlaw.org"
+  },
+  "plugins": [
+    {
+      "name": "japanlaw",
+      "source": {
+        "source": "local",
+        "path": "./plugins/japanlaw"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

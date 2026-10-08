@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "japanlaw",
+  "displayName": "japanlaw.org",
+  "version": "0.10.0",
+  "description": "Read, cite and explain Japanese statutes from the text itself: the Japanese as published, the Ministry of Justice's English where there is one, and labelled machine translation where there is not. Six read-only tools from japanlaw.org's MCP server, and a skill that teaches how a Japanese provision is cited and which English may be quoted.",
+  "author": {
+    "name": "japanlaw.org",
+    "url": "https://japanlaw.org"
+  },
+  "homepage": "https://japanlaw.org/en/agents",
+  "repository": "https://github.com/japanlaw/plugin",
+  "license": "MIT",
+  "keywords": [
+    "japan",
+    "japanese-law",
+    "statutes",
+    "legal",
+    "translation",
+    "mcp"
+  ],
+  "icon": "./assets/icon.svg",
+  "documentationUrl": "https://japanlaw.org/en/agents",
+  "privacyPolicyUrl": "https://japanlaw.org/en/privacy",
+  "termsOfServiceUrl": "https://japanlaw.org/en/terms"
+}
