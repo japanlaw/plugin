@@ -9,7 +9,7 @@
   "plugins": [
     {
       "name": "japanlaw",
-      "description": "Read, cite and explain Japanese statutes from the text itself: the Japanese as published, the Ministry of Justice's English where there is one, and labelled machine translation where there is not. Six read-only tools from japanlaw.org's MCP server, and a skill that teaches how a Japanese provision is cited and which English may be quoted.",
+      "description": "Japanese law, answered from the statute itself: the Japanese as published, the Ministry of Justice's English where there is one and marked machine translation where there is not, every provision quoted with its link. Read-only tools from japanlaw.org's MCP server, and a skill that teaches how a Japanese provision is cited and which English may be quoted.",
       "source": "./plugins/japanlaw",
       "category": "legal",
       "homepage": "https://japanlaw.org/en/agents"

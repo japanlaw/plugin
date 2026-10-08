@@ -14,12 +14,14 @@ and a record of whose English it is.
 **With MCP** — if the japanlaw tools are available (add `https://japanlaw.org/mcp` as a remote MCP
 server; no key):
 
-- `search` — Finds provisions, laws and defined terms by Japanese or English words, best match first. Each result has an id for fetch and the page's URL.
+- `search` — Finds provisions, laws and defined terms by Japanese or English words, in every law held or in one, best match first. Each result has an id for fetch and the page's URL.
 - `fetch` — Reads what a search result's id names: a provision in Japanese with its English, each line marked as the Ministry's translation or machine translation — in force, or as it stood on a day; or a law's overview and outline.
 - `list_laws` — Every law japanlaw.org holds: title, number, kind, date of the text in force and how much of it has English.
 - `get_law` — One law: what it is for, who it binds and who it does not — its exceptions and how it is enforced on request — the texts of it held, earlier and to come, and its chapters, or what is under one of them.
 - `get_provision` — An article, paragraph or item by its citation — 第三十六条第二項, Article 36(2) or art-36/par-2 — in Japanese and English, with what it cites, the terms it defines and its URLs: in force, or as it stood on a day. Shown as a card where the app can draw one.
 - `get_citing_provisions` — Every provision in the collection that cites the one given, with links. No official source publishes this direction.
+- `get_definitions` — The words a law defines for itself — 労働者, 賃金 — each with the statute's own definition, its English and whose that is, a plain explanation, where it is defined and how far it reaches. Given a provision, the definitions that apply in it and the legal vocabulary it uses.
+- `get_amendments` — A law's amendments: the amending Act, its number, the day it takes effect and whether it is in force. Given one, every provision it changes, before and after, in Japanese and English, each English marked as the Ministry's or machine translation.
 
 **Without MCP** — plain HTTP, no key:
 
@@ -60,10 +62,22 @@ The kind decides who made it and what it can do, so never call all of them "law"
 - 政令 — a Cabinet Order, made under an Act.
 - 府令・省令 — a Cabinet Office or Ministerial Order (施行規則 is usually one), made
   under an Act or a Cabinet Order.
-- 条例 — a local ordinance; none are held here.
+- 条例 — a local ordinance, made by a prefecture or a city. Ask the tools whether
+  one is held (`list_laws`); never assume it is or is not.
 
 An Act often leaves the detail to an order: 「厚生労働省令で定める」 means the rule is
 in a Ministerial Order. Follow it there before saying what the rule is.
+
+## Words a law defines
+
+A law defines its own words (定義語): 「この法律で「労働者」とは、…をいう。」 Inside
+that law, and only as far as the definition reaches, the word means what the
+sentence says — not what it means in everyday speech or in another law. Before
+explaining a provision, ask `get_definitions` with the law and the provision's
+address: it gives the definitions that apply there, each with the statute's own
+sentence, where it is defined and how far it reaches, and the site's explanations
+of the legal vocabulary the provision uses. Quote the statute's sentence as the
+definition; the plain explanation is japanlaw.org's, not the law's.
 
 ## Which English, and how to say so
 
@@ -87,6 +101,12 @@ ones, and those amendments passed but not yet in force will leave — and
 `version`. A day whose text is not held is answered "not held": say so, and do
 not quote the nearest text instead. When an answer is not the text in force, say
 which text it is and the days it stands, as `version` and `notice` give them.
+
+`get_amendments` lists the amendments whose changes japanlaw.org holds — the
+amending Act, its number, the day it takes effect and whether it is in force — and,
+given one by its `revision`, each provision it changes, before and after. Where
+e-Gov publishes no text for an amendment, the tool says so and its changes are
+shown with the next amendment's: never describe them as that amendment's alone.
 
 ## Honesty
 

@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "japanlaw",
   "version": "0.10.0",
-  "description": "Read, cite and explain Japanese statutes from the text itself: the Japanese as published, the Ministry of Justice's English where there is one, and labelled machine translation where there is not. Six read-only tools from japanlaw.org's MCP server, and a skill that teaches how a Japanese provision is cited and which English may be quoted.",
+  "description": "Japanese law, answered from the statute itself: the Japanese as published, the Ministry of Justice's English where there is one and marked machine translation where there is not, every provision quoted with its link. Read-only tools from japanlaw.org's MCP server, and a skill that teaches how a Japanese provision is cited and which English may be quoted.",
   "author": {
     "name": "japanlaw.org",
     "url": "https://japanlaw.org"
@@ -23,7 +23,7 @@
       "interface": {
         "displayName": "japanlaw.org",
         "shortDescription": "Japanese law, from the text",
-        "longDescription": "Read, cite and explain Japanese statutes from the text itself: the Japanese as published, the Ministry of Justice's English where there is one, and labelled machine translation where there is not. Six read-only tools from japanlaw.org's MCP server, and a skill that teaches how a Japanese provision is cited and which English may be quoted.\n\nFor anyone who has to deal with a Japanese law: a worker, an employer, someone new to Japan, a lawyer abroad. Ask about an Act, a Cabinet Order or a Ministerial Order and the answer quotes the provision, links its page on japanlaw.org, and says whose English it is.\n\nNo account, no key and nothing to configure. What you ask is not recorded. It is information about the law, not legal advice, and it covers the laws japanlaw.org holds; local ordinances are not among them.",
+        "longDescription": "Japanese law, answered from the statute itself: the Japanese as published, the Ministry of Justice's English where there is one and marked machine translation where there is not, every provision quoted with its link. Read-only tools from japanlaw.org's MCP server, and a skill that teaches how a Japanese provision is cited and which English may be quoted.\n\nFor anyone who has to deal with a Japanese law: a worker, an employer, someone new to Japan, a lawyer abroad. Ask what an article says, what a word in a law means, or what an amendment changed, and the answer quotes the provision, links its page on japanlaw.org, and says whose English it is.\n\nNo account, no key and nothing to configure. What you ask is not recorded. It is information about the law, not legal advice.",
         "developerName": "japanlaw.org",
         "category": "Productivity",
         "capabilities": [
@@ -32,7 +32,9 @@
           "List the laws held",
           "Describe one law",
           "Read one provision",
-          "Find what cites a provision"
+          "Find what cites a provision",
+          "Look up the words a law defines",
+          "See what amendments changed"
         ],
         "websiteURL": "https://japanlaw.org",
         "privacyPolicyURL": "https://japanlaw.org/en/privacy",

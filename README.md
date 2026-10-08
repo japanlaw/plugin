@@ -3,7 +3,8 @@
 Japanese law, read from the text itself. This plugin lets Claude, ChatGPT and
 Codex look up a Japanese statute on [japanlaw.org](https://japanlaw.org), quote the article,
 link to it, and say whose English translation it is quoting: the Ministry of
-Justice's, or a machine translation.
+Justice's, or a machine translation. It can also say what a word the law defines
+means there, and what an amendment changed.
 
 It has two parts:
 
@@ -44,20 +45,21 @@ in their directories, add the connection and the skill yourself; the steps are a
 
 ## What the assistant can do with it
 
-- **Search Japanese law** (`search`): Finds provisions, laws and defined terms by Japanese or English words, best match first. Each result has an id for fetch and the page's URL.
+- **Search Japanese law** (`search`): Finds provisions, laws and defined terms by Japanese or English words, in every law held or in one, best match first. Each result has an id for fetch and the page's URL.
 - **Read a provision or a law** (`fetch`): Reads what a search result's id names: a provision in Japanese with its English, each line marked as the Ministry's translation or machine translation — in force, or as it stood on a day; or a law's overview and outline.
 - **List the laws held** (`list_laws`): Every law japanlaw.org holds: title, number, kind, date of the text in force and how much of it has English.
 - **Describe one law** (`get_law`): One law: what it is for, who it binds and who it does not — its exceptions and how it is enforced on request — the texts of it held, earlier and to come, and its chapters, or what is under one of them.
 - **Read one provision** (`get_provision`): An article, paragraph or item by its citation — 第三十六条第二項, Article 36(2) or art-36/par-2 — in Japanese and English, with what it cites, the terms it defines and its URLs: in force, or as it stood on a day. Shown as a card where the app can draw one.
 - **Find what cites a provision** (`get_citing_provisions`): Every provision in the collection that cites the one given, with links. No official source publishes this direction.
+- **Look up the words a law defines** (`get_definitions`): The words a law defines for itself — 労働者, 賃金 — each with the statute's own definition, its English and whose that is, a plain explanation, where it is defined and how far it reaches. Given a provision, the definitions that apply in it and the legal vocabulary it uses.
+- **See what amendments changed** (`get_amendments`): A law's amendments: the amending Act, its number, the day it takes effect and whether it is in force. Given one, every provision it changes, before and after, in Japanese and English, each English marked as the Ministry's or machine translation.
 
 Every tool only reads. None of them can change anything, anywhere.
 
 ## Good to know
 
-- It covers the laws japanlaw.org holds: Acts, Cabinet Orders and Ministerial
-  Orders. Local ordinances (条例) are not among them; the assistant can list what
-  is held.
+- Ask the assistant which laws japanlaw.org holds: it can list them, and it says
+  so when a law is not among them.
 - Only the Japanese text has legal effect. The Ministry of Justice's English is a
   reference translation, and machine translation is marked as such.
 - This is information about the law, not legal advice.
