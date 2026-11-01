@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "japanlaw",
-  "version": "0.10.0",
+  "version": "0.19.0",
   "description": "Japanese law, answered from the statute itself: the Japanese as published, the Ministry of Justice's English where there is one and marked machine translation where there is not, every provision quoted with its link. Read-only tools from japanlaw.org's MCP server, and a skill that teaches how a Japanese provision is cited and which English may be quoted.",
   "author": {
     "name": "japanlaw.org",
@@ -34,7 +34,8 @@
           "Read one provision",
           "Find what cites a provision",
           "Look up the words a law defines",
-          "See what amendments changed"
+          "See what amendments changed",
+          "See what changes across the laws"
         ],
         "websiteURL": "https://japanlaw.org",
         "privacyPolicyURL": "https://japanlaw.org/en/privacy",

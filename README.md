@@ -47,12 +47,13 @@ in their directories, add the connection and the skill yourself; the steps are a
 
 - **Search Japanese law** (`search`): Finds provisions, laws and defined terms by Japanese or English words, in every law held or in one, best match first. Each result has an id for fetch and the page's URL.
 - **Read a provision or a law** (`fetch`): Reads what a search result's id names: a provision in Japanese with its English, each line marked as the Ministry's translation or machine translation — in force, or as it stood on a day; or a law's overview and outline.
-- **List the laws held** (`list_laws`): Every law japanlaw.org holds: title, number, kind, date of the text in force and how much of it has English.
+- **List the laws held** (`list_laws`): The laws japanlaw.org holds — all, or those of one kind, one topic or whose names hold some words — each with its title, number and kind.
 - **Describe one law** (`get_law`): One law: what it is for, who it binds and who it does not — its exceptions and how it is enforced on request — the texts of it held, earlier and to come, and its chapters, or what is under one of them.
-- **Read one provision** (`get_provision`): An article, paragraph or item by its citation — 第三十六条第二項, Article 36(2) or art-36/par-2 — in Japanese and English, with what it cites, the terms it defines and its URLs: in force, or as it stood on a day. Shown as a card where the app can draw one.
+- **Read one provision** (`get_provision`): An article, paragraph or item by its citation — 第三十六条第二項, Article 36(2) or art-36/par-2 — in Japanese and English, with the terms it defines, how many provisions it cites and how many cite it, and its URLs: in force, or as it stood on a day. Shown as a card where the app can draw one.
 - **Find what cites a provision** (`get_citing_provisions`): Every provision in the collection that cites the one given, with links. No official source publishes this direction.
 - **Look up the words a law defines** (`get_definitions`): The words a law defines for itself — 労働者, 賃金 — each with the statute's own definition, its English and whose that is, a plain explanation, where it is defined and how far it reaches. Given a provision, the definitions that apply in it and the legal vocabulary it uses.
 - **See what amendments changed** (`get_amendments`): A law's amendments: the amending Act, its number, the day it takes effect and whether it is in force. Given one, every provision it changes, before and after, in Japanese and English, each English marked as the Ministry's or machine translation.
+- **See what changes across the laws** (`list_changes`): What changes in Japanese law between two days, across every law held, or one law's or one topic's: each change's day, the law, the amending Act and a link. With no end day, every change still to come.
 
 Every tool only reads. None of them can change anything, anywhere.
 
